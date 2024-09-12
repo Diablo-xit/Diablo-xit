@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Informations</title>
+	<style>
+		body {
+			height: 700px;
+		}
+		
+		.form {
+			border-radius: 10px;
+			font-family: sans-serif;
+			background: #cccc;
+			box-shadow: 50px 50px 50px #000;
+			height: 500px;
+			width: auto;
+			padding: 20px;
+		}
+		
+		span {
+			color: green;
+		}
+		
+		#user {
+			background: transparent;
+		}
+		
+		b {
+			height: 100px;
+		}
+		
+		button {
+			background: lightgreen;
+			border-radius: 20px;
+			width: 100%;
+			height: 30px;
+			margin-top: 50%;
+		}
+		
+		strong {
+			color: gold;
+			text-align: center;
+			margin-left: 100px;
+			background: linear-gradient(160deg, red, cyan);
+			font-size: 20px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<strong>Informations</strong>
+		<br>
+		<b>Online: <span id="online"></span></b>
+		<br>
+		<b>Language: <span id="lg"></span></b>
+		<br>
+		<b>Plateforme: <span id="plt"></span></b>
+		<br>
+		<b>AppCodeName: <span id="code"></span></b>
+		<br>
+		<b id="clr">User Agent: <span id="user"></span></b>
+		<br>
+		<button onclick="ok()">Commencer</button>
+	</div>
+	
+	<script>
+		document.getElementById("online").innerHTML = navigator.onLine;
+		document.getElementById("lg").innerHTML = navigator.language;
+		document.getElementById("plt").innerHTML = navigator.platform;
+		document.getElementById("user").innerHTML = navigator.userAgent;
+		document.getElementById("code").innerHTML = navigator.appCodeName;
+		
+		function ok() {
+
+    fetch('()', {
+      method: 'POST', // ou GET, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        // données à envoyer
+        nom: 'John Doe',
+        email: 'john.doe@example.com'
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+  
+ 
+		}
+	</script>
+</body>
+</html>
+
+
